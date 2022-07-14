@@ -31,16 +31,16 @@ void LoginSvr::onAwake() {
 
 int LoginSvr::readConfig() {
     LoginSvrConfig* config = &this->config;
-    if(!this->coord->config->Get("LoginSvr", "port", config->Port)) {
+    if(!this->coord->Config->Get("LoginSvr", "port", config->Port)) {
         return -1;
     }
-    if(!this->coord->config->Get("LoginSvr", "host", config->Host)) {
+    if(!this->coord->Config->Get("LoginSvr", "host", config->Host)) {
         return -1;
     }
-    if(!this->coord->config->Get("LoginSvr", "user", config->User)) {
+    if(!this->coord->Config->Get("LoginSvr", "user", config->User)) {
         return -1;
     }
-    if(!this->coord->config->Get("LoginSvr", "password", config->Password)) {
+    if(!this->coord->Config->Get("LoginSvr", "password", config->Password)) {
         return -1;
     }
     return 0;

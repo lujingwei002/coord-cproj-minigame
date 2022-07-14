@@ -31,16 +31,16 @@ void GameSvr::onAwake() {
 
 int GameSvr::readConfig() {
     GameSvrConfig* config = &this->config;
-    if(!this->coord->config->Get("GameSvr", "port", config->Port)) {
+    if(!this->coord->Config->Get("GameSvr", "port", config->Port)) {
         return -1;
     }
-    if(!this->coord->config->Get("GameSvr", "host", config->Host)) {
+    if(!this->coord->Config->Get("GameSvr", "host", config->Host)) {
         return -1;
     }
-    if(!this->coord->config->Get("GameSvr", "user", config->User)) {
+    if(!this->coord->Config->Get("GameSvr", "user", config->User)) {
         return -1;
     }
-    if(!this->coord->config->Get("GameSvr", "password", config->Password)) {
+    if(!this->coord->Config->Get("GameSvr", "password", config->Password)) {
         return -1;
     }
 
